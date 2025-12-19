@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scube_task_app/features/auth/presentation/controller/login_controller.dart';
+import 'package:scube_task_app/features/dashboard/presentation/screen/dashboard_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -95,7 +96,8 @@ class LoginScreen extends StatelessWidget {
                         SizedBox(height: 20.h),
                         ElevatedButton(
                           onPressed: () {
-                            // Handle login action
+                            Get.to(() => const DashboardScreen());
+                       
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF0096FC),
